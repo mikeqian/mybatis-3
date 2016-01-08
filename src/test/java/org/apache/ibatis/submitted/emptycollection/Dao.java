@@ -13,35 +13,12 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package org.apache.ibatis.submitted.nestedresulthandler;
+package org.apache.ibatis.submitted.emptycollection;
 
-public class Item {
-  private Integer id;
-  private String name;
+import java.util.List;
 
-  public String toString(){
-    return new StringBuilder()
-            .append("Item(")
-            .append(id)
-            .append(", ")
-            .append(name)
-            .append(" )")
-            .toString();
-  }
-
-  public Integer getId() {
-    return id;
-  }
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
+interface Dao {
+    List<TodoLists> selectWithEmptyList();
+    List<TodoLists> selectWithNonEmptyList();
+    List<TodoLists> selectWithNonEmptyList_noCollectionId();
 }

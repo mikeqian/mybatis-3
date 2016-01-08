@@ -13,35 +13,35 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package org.apache.ibatis.submitted.nestedresulthandler;
+package org.apache.ibatis.submitted.emptycollection;
 
-public class Item {
-  private Integer id;
-  private String name;
+import java.util.List;
 
-  public String toString(){
-    return new StringBuilder()
-            .append("Item(")
-            .append(id)
-            .append(", ")
-            .append(name)
-            .append(" )")
-            .toString();
+public class TodoLists {
+  
+  @Override
+  public String toString() {
+    return "TodoLists [id=" + id + ", todoItems=" + todoItems + "]";
   }
 
-  public Integer getId() {
+  private int id;
+
+  private List<TodoItem> todoItems;
+  
+  public int getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(int id) {
     this.id = id;
   }
 
-  public String getName() {
-    return name;
+  public List<TodoItem> getTodoItems() {
+    return todoItems;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setTodoItems(List<TodoItem> todoItems) {
+    this.todoItems = todoItems;
   }
+
 }
